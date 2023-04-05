@@ -2,9 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="flex justify-center items-center">
+      <div class="flex flex-col mt-5 pt-5 w-[330px]">
+        <h1 class="text-6xl font-bold mt-5 pt-5 leading-snug">
+          The<br />
+          Movie<br />
+          Watchlist
+        </h1>
+        <form class="pt-5 mt-5">
+          <div class="mb-3">
+            <input
+              type="name"
+              id="username"
+              class="h-8 bg-[#D9D9D9] placeholder:text-black text-black text-xs rounded-xl block w-full p-2.5 required"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              id="email"
+              class="h-8 bg-[#D9D9D9] placeholder:text-black text-black text-xs rounded-xl block w-full p-2.5 required"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              class="h-8 bg-[#D9D9D9] placeholder:text-black text-black text-xs rounded-xl block w-full p-2.5 required"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="mt-3">
+            <input
+              type="password"
+              id="confirm-password"
+              class="h-8 bg-[#D9D9D9] placeholder:text-black text-black text-xs rounded-xl block w-full p-2.5 required"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+          <div class="mt-5">
+            <button
+              type="submit"
+              class="w-full text-white bg-[#37C6F3] hover:border-2 hover:border-indigo-500/100 font-medium rounded-xl text-sm px-5 py-2.5 text-center"
+            >
+              Login
+            </button>
+            <div class="text-xs mt-2 text-gray-500">
+              Already have an account? <button class="font-bold">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
