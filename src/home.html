@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body class="bg-[#EBEAEA] font-['Poppins']">
+    <div class="px-10 mx-10">
+      <div class="flex justify-between mt-6">
+        <div>
+          <h1 class="text-3xl font-bold">
+            The<br />
+            Movie<br />
+            Watchlist
+          </h1>
+        </div>
+        <div>
+          <input
+            class="w-[630px] h-14 bg-[#D9D9D9] rounded-full placeholder:text-black text-center"
+            placeholder="🔍 Search a movie or a series"
+          />
+        </div>
+        <div>
+          <button class="w-[150px] h-14 bg-[#D9D9D9] rounded-2xl">
+            <div class="flex flex-row justify-center">
+              <img class="mr-4" src="/assets/flag.png" />
+              <h4 class="font-bold">Watchlist</h4>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col">
+        <div class="flex flex-wrap gap-x-40">
+          <div id="Currently">
+            <h1 class="font-semibold">Currently Watching</h1>
+            <div id="currently-grid" class="my-6 grid grid-cols-2 gap-4">
+              <div>dsfdsdsfsf</div>
+              <div>sdfgdfgbdgbvdb</div>
+            </div>
+          </div>
+          <div id="Suggested">
+            <h1 class="font-semibold">Suggested To Watch</h1>
+            <div class="my-6 grid grid-cols-4 gap-4">
+              <div>sdd</div>
+              <div>sdfds</div>
+              <div>dsff</div>
+              <div>ssddddddddd</div>
+            </div>
+          </div>
+        </div>
+        <div id="Previously" class="mt-5 pt-5">
+          <h1 class="font-semibold">Previously Watched</h1>
+          <div class="my-6 grid grid-cols-7 gap-4"></div>
+        </div>
+      </div>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>
