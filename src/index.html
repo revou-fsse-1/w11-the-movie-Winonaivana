@@ -6,6 +6,45 @@
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <div class="flex justify-center items-center">
+      <div class="flex flex-col mt-5 pt-5 w-[330px]">
+        <h1 class="text-6xl font-bold mt-5 pt-5 leading-snug">
+          The<br />
+          Movie<br />
+          Watchlist
+        </h1>
+        <form class="pt-5 mt-5">
+          <div class="mb-2">
+            <input
+              type="name"
+              id="username"
+              class="h-8 bg-[#D9D9D9] placeholder:text-black text-black text-xs rounded-xl block w-full p-2.5 required"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              class="h-8 bg-[#D9D9D9] placeholder:text-black text-black text-xs rounded-xl block w-full p-2.5 required"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="mt-5">
+            <button
+              type="submit"
+              class="w-full text-white bg-[#37C6F3] hover:border-2 hover:border-indigo-500/100 font-medium rounded-xl text-sm px-5 py-2.5 text-center"
+            >
+              Login
+            </button>
+            <div class="text-xs mt-2 text-gray-500">
+              You don't have an account? <b>SignUp</b>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
