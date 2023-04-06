@@ -4,6 +4,10 @@ const names = document.getElementById("username");
 const password = document.getElementById("password");
 const confirm = document.getElementById("confirm-password");
 
+const usersData = localStorage.getItem("users");
+const users = JSON.parse(usersData) || [{ name: "hello", password: "hello" }];
+localStorage.setItem("users", JSON.stringify(users));
+
 function addUser() {
   fetch(API + "users", {
     method: "POST",
@@ -34,23 +38,23 @@ function match() {
       let existEmail = data.find((e) => e.email === email.value);
       let existName = data.find((e) => e.username === names.value);
 
-      if (existEmail !== undefined) {
-        alert("email already exist");
+      if (existEmail !== undefined || existName !== undefined) {
+        alert("email or username already exist");
         location.reload();
-      } else if (existName !== undefined) {
-        alert("name already exist");
-        location.reload();
-      } else if (names.value == 0) {
-        alert("Fill in username");
-      } else if (email.value == 0) {
-        alert("Fill in email");
-      } else if (password.value == 0) {
-        alert("Fill in password");
+      } else if (names.value == 0 || email.value == 0) {
+        alert("Fill in all fields");
       } else if (password.value !== confirm.value) {
         alert("Password does not match");
+      } else if (password.value == 0) {
+        alert("Fill in password");
       } else {
-        addUser();
         alert("Success");
+        addUser();
+        users.push({
+          name: names.value,
+          password: password.value,
+        });
+        localStorage.setItem("users", JSON.stringify(users));
       }
     });
 }
