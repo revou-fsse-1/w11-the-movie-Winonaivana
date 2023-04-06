@@ -7,8 +7,8 @@ let output = "";
 const showList = (movies) => {
   movies.forEach((movie) => {
     output += `
-        <div class="min-w-[155px] min-h-[235px] max-w-[155px] rounded-[20px] relative overflow-hidden">
-        <img class="w-[100%] object-cover h-[235px] rounded-[20px]" src="${movie.image}">
+        <div class="w-[130px] h-[200px] lg:min-w-[155px] lg:min-h-[227px] md:min-w-[155px] md:min-h-[227px]   rounded-[20px] relative overflow-hidden">
+        <img class="w-[100%] object-cover h-[200px] lg:h-[227px] md:h-[227px] rounded-[20px]" src="${movie.image}">
         </div>
         `;
   });
