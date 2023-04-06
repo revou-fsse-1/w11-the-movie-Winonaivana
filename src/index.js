@@ -14,9 +14,10 @@ function match() {
     (a) => a.name === names.value && a.password === password.value
   );
   if (checkName) {
+    window.location.href = "home.html";
     alert("success");
   } else {
-    alert("no");
+    alert("Invalid");
   }
 }
 
