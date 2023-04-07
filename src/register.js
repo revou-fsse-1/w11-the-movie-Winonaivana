@@ -3,6 +3,7 @@ const email = document.getElementById("email");
 const names = document.getElementById("username");
 const password = document.getElementById("password");
 const confirm = document.getElementById("confirm-password");
+const loginbtn = document.getElementById("loginbtn");
 
 const usersData = localStorage.getItem("users");
 const users = JSON.parse(usersData) || [{ name: "hello", password: "hello" }];
@@ -60,10 +61,12 @@ function match() {
     });
 }
 
-function register() {
+function register(event) {
+  event.preventDefault();
   match();
 }
 
-function login() {
+function login(event) {
+  event.preventDefault();
   window.location.href = "index.html";
 }

@@ -134,3 +134,10 @@ function removeWatchlist() {
 function goToWatchlist() {
   window.location.href = "watchlist.html";
 }
+
+const logged = localStorage.getItem("isLoggedin");
+const loggedData = JSON.parse(logged);
+
+if (loggedData === false) {
+  window.location.href = "index.html";
+}

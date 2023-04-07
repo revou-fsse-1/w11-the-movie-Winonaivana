@@ -58,3 +58,10 @@ checkEmpty();
 function home() {
   window.location.href = "home.html";
 }
+
+const logged = localStorage.getItem("isLoggedin");
+const loggedData = JSON.parse(logged);
+
+if (loggedData === false) {
+  window.location.href = "index.html";
+}

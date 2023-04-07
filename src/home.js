@@ -6,6 +6,12 @@ const searchBar = document.getElementById("searchBar");
 const body = document.getElementById("body");
 const grid4 = document.getElementById("movies-grid");
 
+const logged = localStorage.getItem("isLoggedin");
+const loggedData = JSON.parse(logged);
+
+if (loggedData === false) {
+  window.location.href = "index.html";
+}
 function displaySearch() {
   searchBar.classList.remove("hidden");
 }

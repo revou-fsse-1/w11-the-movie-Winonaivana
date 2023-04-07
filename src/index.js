@@ -9,10 +9,17 @@ function match() {
       return res.json();
     })
     .then((data) => {
-      let user = data.find((e) => e.username === names.value);
-
-      if (user.username !== undefined || user.password !== undefined) {
+      let user = data.find(
+        (e) => e.username === names.value && e.password === password.value
+      );
+      console.log(user);
+      if (user === undefined) {
         alert("invalid");
+        localStorage.setItem("isLoggedin", false);
+      } else {
+        alert("Success");
+        localStorage.setItem("isLoggedin", true);
+        window.location.href = "home.html";
       }
     });
 }
@@ -20,4 +27,8 @@ function match() {
 function login(event) {
   event.preventDefault();
   match();
+}
+
+function register() {
+  window.location.href = "register.html";
 }
