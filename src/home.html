@@ -68,6 +68,12 @@
           placeholder="🔍 Search a movie or a series"
         />
       </form>
+      <h1 id="text" class="hidden font-medium mt-10 font-['Roboto']">
+        Search Results
+      </h1>
+
+      <div id="search-grid" class="hidden my-6 flex flex-wrap gap-4"></div>
+
       <div class="mt-8 flex flex-col font-['Roboto']">
         <div class="flex flex-wrap gap-x-40">
           <div id="Currently" class="hidden">
@@ -82,10 +88,6 @@
         <div id="Previously" class="mt-5 pt-5">
           <h1 class="font-medium">Previously Watched</h1>
           <div id="previously-grid" class="my-6 flex flex-wrap gap-4"></div>
-        </div>
-        <div id="Movies" class="mt-5 pt-5">
-          <h1 class="font-medium">Available movies</h1>
-          <div id="movies-grid" class="my-6 flex flex-wrap gap-4"></div>
         </div>
       </div>
     </div>
