@@ -1,26 +1,26 @@
 const API = "http://localhost:3000/";
-
+const email = document.getElementById("email");
 const names = document.getElementById("username");
 const password = document.getElementById("password");
 
-const usersData = localStorage.getItem("users");
-const users = JSON.parse(usersData) || [{ name: "hello", password: "hello" }];
-localStorage.setItem("users", JSON.stringify(users));
-
-function checkAPI() {}
-
 function match() {
-  const checkName = users.find(
-    (a) => a.name === names.value && a.password === password.value
-  );
-  if (checkName) {
-    window.location.href = "home.html";
-    alert("success");
-  } else {
-    alert("Invalid");
-  }
+  fetch(API + "users")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let existName = data.find((e) => e.username === names.value);
+      const existPass = data.find((e) => e.password === password.value);
+
+      if (existName === undefined || existPass === undefined) {
+        alert("invalid");
+      } else {
+        alert("Success");
+        window.location.href = "index.html";
+      }
+    });
 }
 
-function login() {
+function register() {
   match();
 }

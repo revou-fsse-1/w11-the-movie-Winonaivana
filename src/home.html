@@ -18,9 +18,7 @@
     <div class="lg:px-10 lg:mx-5 md:px-6 px-4">
       <div class="flex flex-wrap justify-between mt-6">
         <div>
-          <h1
-            class="text-base lg:text-3xl md:text-3xl font-bold font-['Poppins']"
-          >
+          <h1 class="text-3xl font-bold font-['Poppins']">
             The<br />
             Movie<br />
             Watchlist
@@ -42,17 +40,26 @@
               <h4 class="font-bold font-['Poppins']">Watchlist</h4>
             </div>
           </button>
-
           <button
+            onclick="displaySearch()"
             class="lg:hidden md:hidden w-10 h-10 bg-[#D9D9D9] rounded-full"
           >
             <div class="flex flex-row justify-center">
-              <h4 class="font-bold text-3xl font-['Roboto']">+</h4>
+              <img src="/assets/find.png" />
+            </div>
+          </button>
+
+          <button
+            onclick="watchlist()"
+            class="lg:hidden md:hidden w-10 h-10 bg-[#D9D9D9] rounded-full"
+          >
+            <div class="flex flex-row justify-center">
+              <img src="/assets/flag.png" />
             </div>
           </button>
         </div>
       </div>
-      <div class="flex flex-row justify-center">
+      <div id="searchBar" class="hidden flex flex-row justify-center">
         <input
           class="lg:hidden md:hidden h-10 w-[400px] bg-[#D9D9D9] rounded-full placeholder:text-black text-center font-['Roboto'] text-sm"
           placeholder="🔍 Search a movie or a series"

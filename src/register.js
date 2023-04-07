@@ -49,6 +49,7 @@ function match() {
         alert("Fill in password");
       } else {
         alert("Success");
+        window.location.href = "index.html";
         addUser();
         users.push({
           name: names.value,

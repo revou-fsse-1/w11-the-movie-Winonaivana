@@ -2,6 +2,15 @@ const API = "http://localhost:3000/";
 const grid1 = document.getElementById("currently-grid");
 const grid2 = document.getElementById("suggested-grid");
 const grid3 = document.getElementById("previously-grid");
+const searchBar = document.getElementById("searchBar");
+
+function displaySearch() {
+  searchBar.classList.remove("hidden");
+}
+
+function watchlist() {
+  window.location.href = "watchlist.html";
+}
 
 let output1 = "";
 let output2 = "";

@@ -6,6 +6,7 @@ const summary = document.getElementById("summary");
 const genre = document.getElementById("genre");
 const rating = document.getElementById("rating");
 const trailer = document.getElementById("trailer");
+const btn = document.getElementById("addWatchlist");
 
 const title = document.getElementById("movieTitle");
 
@@ -17,7 +18,8 @@ fetch(API)
     title.innerHTML = `
     ${data.title}
     `;
-  });
+  })
+  .catch((error) => console.log(error));
 
 fetch(API)
   .then((response) => {
@@ -44,4 +46,44 @@ fetch(API)
             class="rounded-[20px] aspect-video w-[100%] h-[280px]"
             src="${data.trailer}"
           />`;
-  });
+  })
+  .catch((error) => console.log(error));
+
+const loadToLocalStorage = () => {
+  fetch(API)
+    .then((response) => response.json())
+    .then((data) => {
+      localStorage.setItem("movieTitle", `${data.title}`); //title
+      localStorage.setItem("movieImage", `${data.image}`); //image
+      localStorage.setItem("movieSynopsis", `${data.synopsis}`); //synopsis
+      localStorage.setItem("movieGenre", `${data.genre}`); //genre
+      localStorage.setItem("movieProduction", `${data.production}`);
+      localStorage.setItem("movieTrailer", `${data.trailer}`); //trailer
+      localStorage.setItem("movieRating", `${data.rating}`); //rating
+      localStorage.setItem("movieYear", `${data.year}`); //year
+    });
+};
+loadToLocalStorage();
+
+const addToWatchlist = () => {
+  fetch("http://localhost:3000/watchlist", {
+    method: "POST",
+    body: JSON.stringify({
+      id: movieId,
+      title: localStorage.getItem("movieTitle"),
+      image: localStorage.getItem("movieImage"),
+      synopsis: localStorage.getItem("movieSynopsis"),
+      genre: localStorage.getItem("movieGenre"),
+      production: localStorage.getItem("movieProduction"),
+      trailer: localStorage.getItem("movieTrailer"),
+      rating: localStorage.getItem("movieRating"),
+      year: localStorage.getItem("movieYear"),
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+};
+btn.addEventListener("click", addToWatchlist);
