@@ -1,6 +1,7 @@
 const API = `http://localhost:3000/watchlist`;
 
 const watchlist = document.getElementById("watchlist-grid");
+const row = document.getElementById("row");
 let output = "";
 const showMovies = (movies) => {
   movies.forEach((movie) => {
@@ -20,16 +21,40 @@ const showMovies = (movies) => {
   watchlist.innerHTML = output;
 };
 
-fetch(API)
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    showMovies(data);
-  });
+function displayMovie() {
+  fetch(API)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      showMovies(data);
+    });
 
-watchlist.addEventListener("click", (e) => {
-  let id = e.target.id;
-  localStorage.setItem("id", `${id}`);
-  window.location.href = "movie.html";
-});
+  watchlist.addEventListener("click", (e) => {
+    let id = e.target.id;
+    localStorage.setItem("id", `${id}`);
+    window.location.href = "movie.html";
+  });
+}
+
+function checkEmpty() {
+  fetch(API)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      if (data.length < 1) {
+        row.innerHTML = `
+        <div>"Your watchlist is empty. Start adding movies now!"</div>
+        `;
+      } else {
+        displayMovie();
+      }
+    });
+}
+
+checkEmpty();
+
+function home() {
+  window.location.href = "home.html";
+}

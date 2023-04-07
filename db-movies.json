@@ -570,48 +570,5 @@
       "isWatched": false
     }
   ],
-  "watchlist": [
-    {
-      "id": 2,
-      "title": "One Piece Film: Red",
-      "image": "https://m.media-amazon.com/images/M/MV5BNDBhM2IxMzItOTdmZi00NmMzLWFlNTgtN2E2MDRjODU4NzEzXkEyXkFqcGdeQXVyODMyNTM0MjM@._V1_FMjpg_UX1000_.jpg",
-      "synopsis": "Untuk pertama kalinya, Uta - penyanyi paling dicintai akan mengungkapkan dirinya kepada dunia di konser langsungnya. Suara yang ditunggu-tunggu oleh seluruh dunia akan segera bergema.",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Fantasy"
-      ],
-      "production": "20th Century Studios",
-      "trailer": "https://www.youtube.com/embed/89JWRYEIG-s",
-      "rating": 8.5,
-      "isWatch": false,
-      "isPrevious": false
-    },
-    {
-      "id": 6,
-      "title": "The Dark Knight",
-      "image": "https://th.bing.com/th/id/OIP.NN9rKH-vZbFgtH4FuoW7OwHaLH?w=115&h=180&c=7&r=0&o=5&pid=1.7",
-      "synopsis": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-      "year": 2008,
-      "genre": [
-        "Action",
-        "Crime",
-        "Drama"
-      ],
-      "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
-      "rating": 9,
-      "isWatched": false
-    },
-    {
-      "id": "10",
-      "title": "Avengers: Infinity War",
-      "image": "https://th.bing.com/th/id/OIP.ZkOmuqOWNqKDYkMKe2YeAgHaK-?w=204&h=303&c=7&r=0&o=5&pid=1.7",
-      "synopsis": "The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.",
-      "genre": "Action,Adventure,superhero",
-      "production": "undefined",
-      "trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8",
-      "rating": "undefined",
-      "year": "2018"
-    }
-  ]
+  "watchlist": []
 }

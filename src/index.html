@@ -16,7 +16,9 @@
   <body class="flex justify-center items-center h-screen">
     <div class="flex justify-center items-center">
       <div class="flex flex-col w-[330px]">
-        <h1 class="text-6xl font-bold leading-snug font-['Poppins']">
+        <h1
+          class="text-5xl lg:text-6xl md:text-6xl font-bold leading-snug font-['Poppins']"
+        >
           The<br />
           Movie<br />
           Watchlist
@@ -26,7 +28,7 @@
             <input
               type="name"
               id="username"
-              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black text-md rounded-xl block w-full p-4 required"
+              class="h-10 bg-[#D9D9D9] placeholder:text-black placeholder:text-center placeholder:lg:text-left placeholder:md:text-left text-black text-md rounded-xl block w-full p-4 required"
               placeholder="Username"
               required
             />
@@ -36,7 +38,7 @@
             <input
               type="password"
               id="password"
-              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black text-md rounded-xl block w-full p-4 required"
+              class="h-10 bg-[#D9D9D9] placeholder:text-black placeholder:text-center placeholder:lg:text-left placeholder:md:text-left text-black text-md rounded-xl block w-full p-4 required"
               placeholder="Password"
               required
             />
@@ -44,13 +46,14 @@
 
           <div class="mt-5">
             <button
-              onclick="register()"
+              onclick="login(event)"
               class="w-full h-10 text-white bg-[#37C6F3] hover:border-2 hover:border-indigo-500/100 font-bold rounded-xl text-xl text-center"
             >
               Login
             </button>
             <div class="text-xs mt-2 text-gray-500">
-              Already have an account? <button class="font-bold">Login</button>
+              Don't have an account?
+              <button onclick="register()" class="font-bold">Register</button>
             </div>
           </div>
         </form>

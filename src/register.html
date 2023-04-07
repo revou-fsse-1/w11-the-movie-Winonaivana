@@ -16,7 +16,9 @@
   <body class="flex justify-center items-center h-screen">
     <div class="flex justify-center items-center">
       <div class="flex flex-col w-[330px]">
-        <h1 class="text-6xl font-bold leading-snug font-['Poppins']">
+        <h1
+          class="text-5xl lg:text-6xl md:text-6xl font-bold leading-snug font-['Poppins']"
+        >
           The<br />
           Movie<br />
           Watchlist
@@ -26,7 +28,7 @@
             <input
               type="name"
               id="username"
-              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black text-md rounded-xl block w-full p-4 required"
+              class="h-10 bg-[#D9D9D9] placeholder:text-black placeholder:text-center placeholder:lg:text-left placeholder:md:text-left text-black text-md rounded-xl block w-full p-4 required"
               placeholder="Username"
               required
             />
@@ -35,7 +37,7 @@
             <input
               type="email"
               id="email"
-              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black text-md rounded-xl block w-full p-4 required"
+              class="h-10 bg-[#D9D9D9] placeholder:text-black placeholder:text-center placeholder:lg:text-left placeholder:md:text-left text-black text-md rounded-xl block w-full p-4 required"
               placeholder="Email"
               required
             />
@@ -44,7 +46,7 @@
             <input
               type="password"
               id="password"
-              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black text-md rounded-xl block w-full p-4 required"
+              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black placeholder:text-center placeholder:lg:text-left placeholder:md:text-left text-md rounded-xl block w-full p-4 required"
               placeholder="Password"
               required
             />
@@ -53,7 +55,7 @@
             <input
               type="password"
               id="confirm-password"
-              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black text-md rounded-xl block w-full p-4 required"
+              class="h-10 bg-[#D9D9D9] placeholder:text-black text-black placeholder:text-center placeholder:lg:text-left placeholder:md:text-left text-md rounded-xl block w-full p-4 required"
               placeholder="Confirm Password"
               required
             />
@@ -66,7 +68,8 @@
               Register
             </button>
             <div class="text-xs mt-2 text-gray-500">
-              Already have an account? <button class="font-bold">Login</button>
+              Already have an account?
+              <button onclick="login()" class="font-bold">Login</button>
             </div>
           </div>
         </form>

@@ -63,3 +63,7 @@ function match() {
 function register() {
   match();
 }
+
+function login() {
+  window.location.href = "index.html";
+}
