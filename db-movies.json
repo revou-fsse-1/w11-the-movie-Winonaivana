@@ -587,6 +587,39 @@
       "trailer": "https://www.youtube.com/embed/NZrX_ES93JA",
       "rating": "8.5",
       "year": "undefined"
+    },
+    {
+      "id": "2",
+      "title": "One Piece Film: Red",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDBhM2IxMzItOTdmZi00NmMzLWFlNTgtN2E2MDRjODU4NzEzXkEyXkFqcGdeQXVyODMyNTM0MjM@._V1_FMjpg_UX1000_.jpg",
+      "synopsis": "Untuk pertama kalinya, Uta - penyanyi paling dicintai akan mengungkapkan dirinya kepada dunia di konser langsungnya. Suara yang ditunggu-tunggu oleh seluruh dunia akan segera bergema.",
+      "genre": "Animation,Adventure,Fantasy",
+      "production": "20th Century Studios",
+      "trailer": "https://www.youtube.com/embed/89JWRYEIG-s",
+      "rating": "8.5",
+      "year": "undefined"
+    },
+    {
+      "id": "8",
+      "title": "Batman Begins",
+      "image": "https://th.bing.com/th/id/OIP.yFTkE2zLgrXuK1nTYLqBZAHaJ3?w=138&h=184&c=7&r=0&o=5&pid=1.7",
+      "synopsis": "After witnessing his parents' death, Bruce learns the art of fighting to confront injustice. When he returns to Gotham as Batman, he must stop a secret society that intends to destroy the city.",
+      "genre": "Action,Crime,Drama",
+      "production": "undefined",
+      "trailer": "https://www.youtube.com/embed/neY2xVmOfUM",
+      "rating": "undefined",
+      "year": "2008"
+    },
+    {
+      "id": "9",
+      "title": "Avengers: Endgame",
+      "image": "https://th.bing.com/th/id/OIP.KNfIqaD92jvecpbxNWWQ4wHaJ4?w=139&h=185&c=7&r=0&o=5&pid=1.7",
+      "synopsis": "After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.",
+      "genre": "Action,Adventure,superhero",
+      "production": "undefined",
+      "trailer": "https://www.youtube.com/embed/TcMBFSGVi1c",
+      "rating": "undefined",
+      "year": "2019"
     }
   ]
 }

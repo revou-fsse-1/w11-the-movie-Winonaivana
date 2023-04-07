@@ -173,11 +173,10 @@ function searchMoviess(e) {
         grid5.innerHTML = "";
         grid5.classList.remove("hidden");
         texts.classList.remove("hidden");
-        let filtered = data.filter((movie) =>
-          movie["title"].toLowerCase().includes(value)
-        );
-        if (filtered.length > 0) {
-          filtered.forEach((movie) => {
+        data.forEach((movie) => {
+          const title = movie.title.toLowerCase();
+
+          if (title.includes(value)) {
             output5 = `
             
             <div class="w-[130px] h-[200px] lg:min-w-[155px] lg:min-h-[227px] md:min-w-[155px] md:min-h-[227px]   rounded-[20px] relative overflow-hidden">
@@ -192,13 +191,10 @@ function searchMoviess(e) {
         </div>
 
             `;
-          });
-          grid5.innerHTML += output5;
-        } else {
-          grid5.innerHTML = `
-        <p>No movies found</p?
-        `;
-        }
+
+            grid5.innerHTML += output5;
+          }
+        });
       }
     });
 }
