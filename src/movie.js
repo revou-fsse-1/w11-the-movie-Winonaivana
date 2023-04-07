@@ -7,6 +7,7 @@ const genre = document.getElementById("genre");
 const rating = document.getElementById("rating");
 const trailer = document.getElementById("trailer");
 const btn = document.getElementById("addWatchlist");
+const remove = document.getElementById("removeWatchlist");
 
 const title = document.getElementById("movieTitle");
 
@@ -90,7 +91,6 @@ function addMovie() {
     })
     .then((data) => console.log(data));
 }
-btn.addEventListener("click", addToWatchlist);
 
 let APIid = `http://localhost:3000/watchlist?id=${movieId}`;
 
@@ -105,4 +105,32 @@ function addToWatchlist() {
         alert("Movie already added to watchlist");
       }
     });
+}
+
+function showRemove() {
+  fetch(APIid)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.length < 1) {
+        remove.classList.add("hidden");
+      } else {
+        remove.classList.remove("hidden");
+      }
+    });
+}
+
+showRemove();
+
+function removeWatchlist() {
+  fetch(`http://localhost:3000/watchlist/${movieId}`, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+}
+
+function goToWatchlist() {
+  window.location.href = "watchlist.html";
 }
