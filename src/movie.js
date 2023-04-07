@@ -51,7 +51,9 @@ fetch(API)
 
 const loadToLocalStorage = () => {
   fetch(API)
-    .then((response) => response.json())
+    .then((response) => {
+      return response.json();
+    })
     .then((data) => {
       localStorage.setItem("movieTitle", `${data.title}`); //title
       localStorage.setItem("movieImage", `${data.image}`); //image
@@ -65,7 +67,7 @@ const loadToLocalStorage = () => {
 };
 loadToLocalStorage();
 
-const addToWatchlist = () => {
+function addMovie() {
   fetch("http://localhost:3000/watchlist", {
     method: "POST",
     body: JSON.stringify({
@@ -83,7 +85,24 @@ const addToWatchlist = () => {
       "Content-type": "application/json; charset=UTF-8",
     },
   })
-    .then((response) => response.json())
+    .then((response) => {
+      return response.json();
+    })
     .then((data) => console.log(data));
-};
+}
 btn.addEventListener("click", addToWatchlist);
+
+let APIid = `http://localhost:3000/watchlist?id=${movieId}`;
+
+function addToWatchlist() {
+  fetch(APIid)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.length < 1) {
+        alert("Movie added to watchlist");
+        addMovie();
+      } else {
+        alert("Movie already added to watchlist");
+      }
+    });
+}

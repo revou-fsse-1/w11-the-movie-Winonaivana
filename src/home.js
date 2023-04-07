@@ -3,11 +3,17 @@ const grid1 = document.getElementById("currently-grid");
 const grid2 = document.getElementById("suggested-grid");
 const grid3 = document.getElementById("previously-grid");
 const searchBar = document.getElementById("searchBar");
+const body = document.getElementById("body");
 
 function displaySearch() {
   searchBar.classList.remove("hidden");
 }
 
+body.addEventListener("click", removeSearch);
+
+function removeSearch() {
+  searchBar.classList.add("hidden");
+}
 function watchlist() {
   window.location.href = "watchlist.html";
 }
