@@ -101,6 +101,12 @@
       "email": "w",
       "password": "ww",
       "id": 18
+    },
+    {
+      "username": "u",
+      "email": "u",
+      "password": "u",
+      "id": 19
     }
   ],
   "movies": [
@@ -620,6 +626,17 @@
       "trailer": "https://www.youtube.com/embed/TcMBFSGVi1c",
       "rating": "undefined",
       "year": "2019"
+    },
+    {
+      "id": "5",
+      "title": "The Godfather",
+      "image": "https://th.bing.com/th/id/OIP._5fxLczZe-Orf76zbPUWSAHaLH?w=120&h=180&c=7&r=0&o=5&pid=1.7",
+      "synopsis": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "genre": "Crime,Drama",
+      "production": "undefined",
+      "trailer": "",
+      "rating": "9.2",
+      "year": "undefined"
     }
   ]
 }
