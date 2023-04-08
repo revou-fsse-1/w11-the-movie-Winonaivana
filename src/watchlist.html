@@ -24,12 +24,14 @@
             Watchlist
           </h1>
         </div>
-        <div>
+        <form>
           <input
+            id="watchlistSearch2"
             class="hidden lg:block md:block lg:w-[550px] md:w-[400px] h-14 bg-[#D9D9D9] rounded-full placeholder:text-black text-center font-['Roboto']"
-            placeholder=" Search a movie or a series"
+            placeholder=" Search watchlist"
           />
-        </div>
+          <button onclick="showResult2(event)"></button>
+        </form>
 
         <div>
           <button
@@ -52,17 +54,23 @@
           </button>
         </div>
       </div>
-      <div class="flex flex-row justify-center">
+      <form class="flex flex-row justify-center">
         <input
           id="watchlistSearch"
           class="lg:hidden md:hidden h-10 w-[400px] bg-[#D9D9D9] rounded-full placeholder:text-black text-center font-['Roboto'] text-sm"
-          placeholder="Search a movie or a series"
+          placeholder="Search watchlist"
         />
-        <button onclick="showResult()"></button>
-      </div>
+        <button onclick="showResult(event)"></button>
+      </form>
+      <h1 id="text" class="hidden font-medium mt-10 font-['Roboto']">
+        Search Results
+      </h1>
+
+      <div id="search-grid" class="hidden my-6 flex flex-wrap gap-4"></div>
+
       <div id="row" class="flex flex-row flex-wrap justify-center">
         <div
-          class="my-10 grid grid-cols-2 lg:grid-cols-6 md:grid-cols-4 gap-6"
+          class="hidden my-10 grid grid-cols-2 lg:grid-cols-6 md:grid-cols-4 gap-6"
           id="watchlist-grid"
         ></div>
       </div>
