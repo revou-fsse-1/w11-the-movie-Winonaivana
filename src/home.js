@@ -141,8 +141,6 @@ const currently = document.getElementById("Currently");
 currently.classList.remove("hidden");
 const searchResult = document.getElementById("searchResult");
 
-searchBar.addEventListener("submit", searchMoviess);
-
 //async function searchMoviess(e) {
 // e.preventDefault();
 // const movies = await getMovies();
@@ -157,10 +155,55 @@ const grid5 = document.getElementById("search-grid");
 const texts = document.getElementById("text");
 let output5 = "";
 
-function searchMoviess(e) {
-  e.preventDefault();
+function searchMoviess(event) {
+  event.preventDefault();
 
   const value = searchMovie.value.toLowerCase();
+  fetch(API + "movies")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      if (value.length < 2) {
+        grid5.innerHTML = "";
+        grid5.classList.add("hidden");
+        texts.classList.add("hidden");
+      } else {
+        grid5.innerHTML = "";
+        grid5.classList.remove("hidden");
+        texts.classList.remove("hidden");
+        data.forEach((movie) => {
+          const title = movie.title.toLowerCase();
+
+          if (title.includes(value)) {
+            output5 = `
+            
+            <div class="w-[130px] h-[200px] lg:min-w-[155px] lg:min-h-[227px] md:min-w-[155px] md:min-h-[227px]   rounded-[20px] relative overflow-hidden">
+        <img class="w-[100%] object-cover h-[200px] lg:h-[227px] md:h-[227px] rounded-[20px] " src="${movie.image}">
+        <p
+      class="w-[100%] h-[100%] absolute  text-white/0 hover:text-white text-md font-bold top-0 flex justify-center items-center hover:bg-black/50   "
+      id =${movie.id}
+      "
+      >
+      ${movie.rating}
+    </p>
+        </div>
+
+            `;
+
+            grid5.innerHTML += output5;
+          }
+        });
+      }
+    });
+}
+
+const searchMoviee = document.getElementById("searchMoviess");
+
+function searchMoviesss(event) {
+  event.preventDefault();
+
+  const value = searchMoviee.value.toLowerCase();
   fetch(API + "movies")
     .then((response) => {
       return response.json();

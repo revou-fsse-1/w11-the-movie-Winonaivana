@@ -24,13 +24,14 @@
             Watchlist
           </h1>
         </div>
-        <div>
+        <form>
           <input
-            id="searchMovie"
+            id="searchMovies"
             class="hidden lg:block md:block lg:w-[550px] md:w-[400px] h-14 bg-[#D9D9D9] rounded-full placeholder:text-black text-center font-['Roboto']"
-            placeholder="🔍 Search a movie or a series"
+            placeholder="Search a movie or a series"
           />
-        </div>
+          <button onclick="searchMoviess(event)"></button>
+        </form>
 
         <div>
           <button
@@ -63,10 +64,11 @@
       </div>
       <form id="searchBar" class="hidden flex flex-row justify-center">
         <input
-          id="searchMovies"
+          id="searchMoviess"
           class="lg:hidden md:hidden h-10 w-[400px] bg-[#D9D9D9] rounded-full placeholder:text-black text-center font-['Roboto'] text-sm"
-          placeholder="🔍 Search a movie or a series"
+          placeholder=" Search a movie or a series"
         />
+        <button onclick="searchMoviesss(event)"></button>
       </form>
       <h1 id="text" class="hidden font-medium mt-10 font-['Roboto']">
         Search Results
@@ -92,5 +94,13 @@
       </div>
     </div>
     <script src="home.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -65,3 +65,5 @@ const loggedData = JSON.parse(logged);
 if (loggedData === false) {
   window.location.href = "index.html";
 }
+
+const searchWatchlist = document.getElementById("watchlistSearch");
