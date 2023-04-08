@@ -159,7 +159,7 @@ let output5 = "";
 
 function searchMoviess(e) {
   e.preventDefault();
-  console.log("hello");
+
   const value = searchMovie.value.toLowerCase();
   fetch(API + "movies")
     .then((response) => {
