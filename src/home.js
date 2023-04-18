@@ -13,14 +13,19 @@ if (loggedData === false) {
   window.location.href = "index.html";
 }
 
+function logout() {
+  localStorage.setItem("isLoggedin", false);
+  window.reload();
+}
+
 function displaySearch() {
   searchBar.classList.remove("hidden");
 }
 
-body.addEventListener("click", removeSearch);
+body.addEventListener("click", reload);
 
-function removeSearch() {
-  searchBar.classList.add("hidden");
+function reload() {
+  window.location.href = "home.html";
 }
 function watchlist() {
   window.location.href = "watchlist.html";
@@ -109,11 +114,6 @@ fetch(API + "isPrevious")
     showPreviously(data);
   });
 
-//let showDetails = (e) => {
-//  let id = e.getAttribute("id");
-//  console.log(`${id}`);
-//};
-
 grid1.addEventListener("click", (e) => {
   let id = e.target.id;
   localStorage.setItem("id", `${id}`);
@@ -141,16 +141,6 @@ const currently = document.getElementById("Currently");
 currently.classList.remove("hidden");
 const searchResult = document.getElementById("searchResult");
 
-//async function searchMoviess(e) {
-// e.preventDefault();
-// const movies = await getMovies();
-// const value = searchMovie.value;
-
-//if (value.length > 0) {
-//  searchResult.innerHTML = "";
-//searchResult.classList.remove("hidden");
-//  }
-//}
 const grid5 = document.getElementById("search-grid");
 const texts = document.getElementById("text");
 let output5 = "";

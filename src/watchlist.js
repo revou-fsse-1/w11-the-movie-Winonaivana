@@ -2,9 +2,16 @@ const API = `http://localhost:3000/watchlist`;
 
 const watchlist = document.getElementById("watchlist-grid");
 const row = document.getElementById("row");
+const homebtn = document.getElementById("body");
 let output = "";
 
 watchlist.classList.remove("hidden");
+
+function relocate() {
+  window.location.href = "home.html";
+}
+
+homebtn.addEventListener("click", relocate);
 
 const showMovies = (movies) => {
   movies.forEach((movie) => {

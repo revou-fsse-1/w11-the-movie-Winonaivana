@@ -8,8 +8,14 @@ const rating = document.getElementById("rating");
 const trailer = document.getElementById("trailer");
 const btn = document.getElementById("addWatchlist");
 const remove = document.getElementById("removeWatchlist");
-
 const title = document.getElementById("movieTitle");
+const homebtn = document.getElementById("body");
+
+function relocate() {
+  window.location.href = "home.html";
+}
+
+homebtn.addEventListener("click", relocate);
 
 fetch(API)
   .then((response) => {

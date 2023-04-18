@@ -43,6 +43,7 @@
               <h4 class="font-bold font-['Poppins']">Watchlist</h4>
             </div>
           </button>
+
           <button
             onclick="displaySearch()"
             class="lg:hidden md:hidden w-10 h-10 bg-[#D9D9D9] rounded-full"
@@ -91,6 +92,17 @@
           <h1 class="font-medium">Previously Watched</h1>
           <div id="previously-grid" class="my-6 flex flex-wrap gap-4"></div>
         </div>
+      </div>
+      <div style="margin-bottom: 20px" class="flex flex-row justify-between">
+        <div></div>
+        <button
+          onclick="logout()"
+          class="w-[150px] h-14 bg-[#D9D9D9] rounded-2xl"
+        >
+          <div class="flex flex-row justify-center">
+            <h4 class="font-bold font-['Poppins']">Log out</h4>
+          </div>
+        </button>
       </div>
     </div>
     <script src="home.js"></script>
